@@ -1,0 +1,13 @@
+<svg width="700" height="700" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="154" cy="45" r="10" fill="black" />
+  <circle cx="194" cy="45" r="10" fill="black" />
+  <circle cx="170" cy="75" r="16" fill="red" />
+  <path d="M 140 100 L 200 100" fill="none" stroke="black" stroke-width="2" />
+  <path d="M 140 100 C 150 120 190 120 200 100" fill="none" stroke="black" stroke-width="2" />
+  <circle cx="170" cy="70" r="60" stroke="black" fill="none" stroke-width="2"/>
+  <circle cx="150" cy="45" r="16" stroke="black" fill="none" stroke-width="1"/>
+  <circle cx="190" cy="45" r="16" stroke="black" fill="none" stroke-width="1" />
+  <line x1="166" y1="45" x2="174" y2="45" stroke="black" stroke-width="2" />
+  <rect x="160" y="101" width="8" height="7" fill="goldenrod" />
+    <rect x="170" y="101" width="8" height="7" fill="goldenrod" />
+</svg>
