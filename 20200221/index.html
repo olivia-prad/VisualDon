@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .nez { fill:crimson}
+            .nez:hover { fill: black}
+
+            @keyframes oeilD {
+                from {
+                    cx:185
+                }
+                to {
+                    cx:195
+                }
+            }
+            #droit {
+                animation-duration: 6s;
+                animation-name: oeilD ;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes oeilG {
+                from {
+                    cx:145
+                }
+                to {
+                    cx:155
+                }
+            }
+            #gauche {
+                animation-duration: 9s;
+                animation-name: oeilG ;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+        </style>
+    </head>
+    <body>
+        <svg id= svg viewBox='0 0 300 200'>
+            <circle class=oeil id=gauche cy="45" r="10" fill="black" />
+            <circle class=oeil  id=droit cy="45" r="10" fill="black" />
+            <circle class= nez cx="170" cy="75" r="16"  />
+            <path class= bouche d="M 139 100 L 201 100" fill="none" stroke="black" stroke-width="2" />
+            <path class= bouche id= ouverte d="M 140 100 C 150 120 190 120 200 100" fill="none" stroke="black" stroke-width="2" />
+            <circle class= tete cx="170" cy="70" r="60" stroke="black" fill="none" stroke-width="2"/>
+            <circle class= lunette cx="150" cy="45" r="16" stroke="black" fill="none" stroke-width="1"/>
+            <circle class= lunette cx="190" cy="45" r="16" stroke="black" fill="none" stroke-width="1" />
+            <line class= lunette x1="166" y1="45" x2="174" y2="45" stroke="black" stroke-width="2" />
+            <rect id= dentG x="160" y="101" width="8" height="7" fill="goldenrod" stroke="black" stroke-width="0.2"/>
+            <rect id= dentD x="170" y="101" width="8" height="7" fill="goldenrod" stroke="black" stroke-width="0.2"/>
+          </svg>
+
+          <script>
+                //dent droite
+                const dentDr = document.getElementById('dentD')
+                let isCleanD = true
+                dentD.addEventListener('click', () => {
+                isCleanD = !isCleanD
+                dentDr.setAttribute('fill', isCleanD ? 'ivory' : 'goldenrod')
+                })
+                //dent gauche
+                const dentG = document.getElementById('dentG')
+                let isCleanG = true
+                dentG.addEventListener('click', () => {
+                isCleanG = !isCleanG
+                dentG.setAttribute('fill', isCleanG ? 'ivory' : 'goldenrod')
+                })
+
+                const svg = document.getElementById('svg')
+                //pecas gauche
+                const createRandomCircleG = () => {
+                const circleG = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
+                circleG.setAttribute('cx', (Math.random() * 30)+120)
+                circleG.setAttribute('cy', (Math.random() * 30)+65)
+                circleG.setAttribute('r', '0.5')
+                circleG.setAttribute('fill', 'LightSalmon')
+                svg.appendChild(circleG)
+                }
+
+                Array.from(Array(10)).forEach(createRandomCircleG)
+                //pecas droite
+                const createRandomCircleD = () => {
+                const circleD = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
+                circleD.setAttribute('cx', (Math.random() * 30)+190)
+                circleD.setAttribute('cy', (Math.random() * 30)+65)
+                circleD.setAttribute('r', '0.5')
+                circleD.setAttribute('fill', 'LightSalmon')
+                svg.appendChild(circleD)
+                }
+
+                Array.from(Array(10)).forEach(createRandomCircleD)
+          </script>
+    </body>
+</html>
