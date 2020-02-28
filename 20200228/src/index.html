@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <h1>
+        Top 4 Meilleurs butteuses
+    </h1>
+    <h2>Équipes qui ont inscrit le plus de but durant la coupe du monde féminine de football 2019</h2>
+    <script>
+const DATA= [
+  {
+    "equipe": "USA",
+    "nb_buts": 26
+  },
+  {
+    "equipe": "ENG",
+    "nb_buts": 13
+  },
+  {
+    "equipe": "SWE",
+    "nb_buts": 12
+  },
+  {
+    "equipe": "NED",
+    "nb_buts": 11
+  }
+];
+
+const WIDTH = 700
+const HEIGHT = 700
+const svg = d3.select('body').append('svg').attr('width', WIDTH+20).attr('height', HEIGHT+20);
+const MARGIN = 10
+const MARGIN_BOTTOM = 0
+const MARGIN_LEFT = 30
+const BAR_WIDTH = (WIDTH / DATA.length )
+const GRAPH_HEIGHT = HEIGHT 
+
+// echelle hauteur
+
+  const heightScale = d3.scaleLinear()
+    .domain([0, d3.max(DATA, d => d.nb_buts)]) // le maximum de buts
+    .range([0, HEIGHT]);
+  
+    // l'échelle de couleur
+  const fillScale = d3.scaleLinear()
+    .domain([0, d3.max(DATA, d => d.nb_buts)])
+    .range(['white', 'Black']);
+
+//echelle axe y
+
+    const yScale = d3.scaleLinear()
+    .domain([0, d3.max(DATA, d => d.nb_buts)])
+    .range([GRAPH_HEIGHT, 0]);
+
+
+//graph de barres
+  svg.selectAll('rect')
+    .data(DATA)
+    .enter()
+    .append('rect')
+    .attr('x', (d, i) =>  i * BAR_WIDTH)
+    .attr('width', BAR_WIDTH - MARGIN)
+    // nous devons passer d.nb_buts à heightScale
+    .attr('y', d => HEIGHT - heightScale(d.nb_buts))
+    .attr('height', d => heightScale(d.nb_buts))
+    .attr('fill', d => fillScale(d.nb_buts));
+
+    // nom equipes
+const teamNames = svg.append('g')
+.attr('transform', `translate(${MARGIN_LEFT}, 0)`);
+
+  teamNames.selectAll('text')
+    .data(DATA)
+    .enter()
+    .append('text')
+    .attr('x', (d, i) => i * BAR_WIDTH  + BAR_WIDTH / 4)
+    .attr('y', HEIGHT - 10)
+    .attr('fill', 'white')
+    .attr('text-anchor', 'middle')
+    .attr('font-family', 'sans-serif')
+    .attr('font-size', 30)
+    .text(d => d.equipe);
+    
+//axe y
+    const axisY = d3.axisRight().scale(yScale)
+    .tickFormat(d => `${d}`)
+    .ticks(5);
+
+  svg.append('g')
+    .attr('transform', `translate(${700})`)
+    .attr('fill', 'white')
+    .call(axisY);
+
+
+    </script>
+  </body>
+</html>

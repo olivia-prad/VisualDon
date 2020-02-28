@@ -1,0 +1,27 @@
+{
+  "name": "VisualDon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "d3": "^5.15.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "batons:dev": "parcel 20200228/src/index.html --out-dir 20200228/dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olivia-prad/VisualDon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olivia-prad/VisualDon/issues"
+  },
+  "homepage": "https://github.com/olivia-prad/VisualDon#readme"
+}

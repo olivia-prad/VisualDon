@@ -1,0 +1,18 @@
+[
+  {
+    "equipe": "USA",
+    "nb_buts": 26
+  },
+  {
+    "equipe": "ENG",
+    "nb_buts": 13
+  },
+  {
+    "equipe": "SWE",
+    "nb_buts": 12
+  },
+  {
+    "equipe": "NED",
+    "nb_buts": 11
+  }
+]
