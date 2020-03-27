@@ -14,8 +14,11 @@ C'est un paradigme de la programmation de type **déclaratif**. Ce type de progr
 
 **2.    Décrivez ce qu'est la programmation orientée objets**
 
-C'est un paradigme de programmation constitué d'objets. Il y a un programme principale qui communique entre les différents objets (`class`)
-Chque objet détermine un concept. On retranscrit le réel sous forme virtuelle par ces objets. Chaque objet contient un constructeur, avecl'état interne, les paramêtre qui constituent l'objet ainsi que différentes méthodes qui permettent de modifier cet état interne (paramêtres du constructeur).
+C'est un paradigme de programmation constitué d'objets. Il y a un programme principale qui communique entre les différents objets (`class`).
+
+Chaque objet détermine un concept. On retranscrit le réel sous forme virtuelle par ces objets. Chaque objet contient:
+    - un **constructeur**, avec l'état interne, les paramêtre qui constituent l'objet
+    - différentes **méthodes** qui permettent de modifier cet état interne (paramêtres du constructeur).
 
 Le programme principale qui sert de communication entre les différents objets et de type impératif.
-Les méthodes ne sont pas pure, elles dépendent de l'état interne de l'objet, qui peut varier d'une fois à l'autre.
+Les méthodes ne sont **pas pure**, elles dépendent de l'état interne de l'objet, qui peut varier d'une fois à l'autre.
