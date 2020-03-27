@@ -20,7 +20,7 @@
 
 - **Pourquoi**
 
-Pour ne pas tout écrire dans le même scripte, nous allons diviser le code en plusieurs fichiers pour après les importer dans `index.js`.
+Pour ne pas tout écrire dans le même scripte, il faut diviser le code en plusieurs fichiers pour après les importer dans `index.js`.
 Permet de mettre le code au propre, de regroupper les éléments afin de les retrouver plus facilement
 
 **2.    Comment le nom du pays est t-il afficher quand la souris passe sur une bulle?**
