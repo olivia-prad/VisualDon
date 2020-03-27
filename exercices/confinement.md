@@ -1,4 +1,4 @@
-#Confinement
+# Confinement
 
 **En ces temps de confinement, nous devons communiquer plus que d'habitude au travers d'ordinateurs (et smartphones). En tant qu'ingénieurs des médias, comment trouvez vous que ces médias remplacent le contacte de personne à personne? Quels types d'interactions fonctionne tout aussi bien par internet qu'en personne? Quels types d'interactions ne peuvent être remplacées par des médias?**
 
