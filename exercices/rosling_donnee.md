@@ -10,5 +10,6 @@
 **2.    Quel est l'interet d'avoir des scriptes pour manipuler des données?**
 
 Afin d'automatiser la procédure. ça permet d'éviter de répéter les même actions plusieurs fois et également d'éviter les erreurs manuelles
+
 **3.    Comment avons nous joint les quatre jeux de données?**
 Pour joindre des fichiers il faut un identifiant commun tous les fichiers. Dans cet exercice , c'est l'identifiant **geo** qui est présent dans chacun des 4 fichiers.
