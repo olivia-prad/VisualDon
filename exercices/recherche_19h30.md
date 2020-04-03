@@ -2,7 +2,8 @@
 
 **Les 15 premiers titres des épisodes les plus vus**
 
-La commande à entrer dans le terminal est la suivante: 
+La commande à entrer dans le terminal est la suivante:
+ 
 ndjson-sort "a.views > b.views ? -1 : 1" < episodes.ndjson \
 | head -15 \
 | ndjson-map "{ firstTitle: d.segments[0].title, date: d.date, vues: d.views}"
