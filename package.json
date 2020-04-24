@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
     "d3": "^5.15.0",
     "ramda": "^0.27.0",
     "xlsx": "^0.15.6"
