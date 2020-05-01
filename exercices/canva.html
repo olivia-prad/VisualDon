@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Exercice canvas</title>
+  </head>
+  <body>
+    <canvas id="dessin" width="1000" height="500"></canvas>
+    <script>
+
+const canvas = document.getElementById('dessin')
+const context = canvas.getContext('2d')
+
+//tête
+const center = { x: 1000 / 2, y: 500 / 2 }
+        context.beginPath()
+        context.arc(center.x, center.y, 500 / 3, 0, Math.PI * 2)
+        context.fillStyle = 'yellow'
+        context.fill()
+//bouche
+context.beginPath()
+        context.arc(1000 / 2, 500 / 1.7, 70, -0.4, 3)
+        context.lineWidth = 5
+        context.fillStyle= 'red'
+        context.fill()
+
+// Oeil ouvert
+context.beginPath()
+        context.arc(center.x-70, center.y-50, 20, 0, 360)
+        context.lineWidth = 5
+        context.fillStyle= 'black'
+        context.fill()
+
+// Oeil fermé 
+        context.moveTo(center.x+20,center.y-50)
+        context.lineTo(center.x+70,center.y-80)
+        context.lineWidth = 15
+        context.stroke()
+
+
+    </script>
+  </body>
+</html>
